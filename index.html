@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+
+<section class="SideBar">
+    <div class="Socials">
+    <a href="https://github.com/habib1712">
+        <img class="github" src="asset/github.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/shah-h/">
+    <img class="linkedin" src="asset/linkedin.png" alt="LinkedIn">
+    </a>
+</div>
+    <ul><nav>
+    <a href="#Home">Home</a>
+    <a href="#AboutMe">About</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Contact">Contact</a>
+    </nav>
+    
+    </ul>
+</section>
+<section class="parallax" id="Home">
+    <img src="asset/parallax/sky.png" alt="sky" class="parallax-layer" data-speed="0">
+    <img src="asset/parallax/hilly.png" alt="hill" class="parallax-layer" data-speed="0.5">
+    <img src="asset/parallax/mountains.png" alt="mountain" class="parallax-layer" data-speed="0.4">
+    <img src="asset/parallax/cliffs.png" alt="cliff" class="parallax-layer" data-speed="0.28">
+    <h2 id="Intro">Hey, I'm Habib!</h2>
+</section>
+
+<main>
+
+
+
+<section class="AboutSkills" id="AboutMe">
+
+    <div class="About">
+        <h2>About Me</h2>
+        <p>Hey, I'm Habib! Recent Computing and Information Technology Graduate from BCU.
+            I have a strong interest in cloud technologies, automation and programming.
+            I've worked on a variety of projects, including cloud based setups, automated systems, VR environments and coding projects. 
+            
+        </p>
+        <br>
+        <p>I love working in the different areas of tech, from cloud platforms to front-end and back-end development and I enjoy exploring creative and innovative ways to apply my skills.
+            </p>
+            <br>
+            <p>
+            Outside of tech I love music, travelling, basketball, games and horror.
+            </p>
+    </div>
+
+    <div class="Skills">
+        <h2>Skills</h2>
+        <ul><li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C#</li>
+        <li>SQL</li>
+        <li>Bash</li>
+    
+    </ul>
+    </div>
+</section>
+
+
+    <section class="Projects" id="Projects">
+        <h2>Projects</h2>
+        
+        <div class="projects-container">
+
+        <!-- <div class="project-card" onclick="Open('project7')">
+            <h3>WIP</h3>
+            <p>WIP</p>
+        </div>
+
+        <div class="project-card" onclick="Open('project6')">
+            <h3>Movie Watchlist</h3>
+            <p>Python - SQL - Flask - HTML/CSS - API</p>
+        </div>
+
+            
+        <div class="project-card" onclick="Open('project5')">
+            <h3>Memory Card Game</h3>
+            <p>HTML - CSS - JavaScript - React</p>
+        </div> -->
+
+        <div class="project-card" onclick="Open('project4')">
+            <h3>Portfolio Website</h3>
+            <p>HTML - CSS - JavaScript</p>
+        </div>
+        <div class="project-card" onclick="Open('project3')">
+            <h3>RPG Adventure Game</h3>
+            <p> C# </p>
+        </div>
+        <div class="project-card" onclick="Open('project2')">
+            <h3>VR Therapeutic Room</h3>
+            <p>Unity - C# - XR Toolkit</p>
+        </div>
+        <div class="project-card" onclick="Open('project1')">
+            <h3>Automated Inventory System</h3>
+            <p>Power Automate - PowerApps - Excel</p>
+
+
+    </div>
+</section>
+
+
+<div id="Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="Close()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <h4 id="modalTool"></h4>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+    
+
+
+    <section class="Contact" id="Contact">
+        <h2>Contact</h2>
+        <p>Lets connect! You can find me on <a href="https://www.linkedin.com/in/shah-h/">linkedin</a> or <br> if you prefer email me at <br><a href="mailto:shahhabib1712@gmail.com">shahhabib1712@gmail.com</a></p>
+    </section>
+</main>
+</body>
+</html>
