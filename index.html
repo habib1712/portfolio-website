@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,128 +8,353 @@
     <script defer src="script.js"></script>
     <title>Portfolio</title>
 </head>
+
 <body>
 
 <section class="SideBar">
-    <div class="Socials">
+
+
+<div class="Socials">
+
     <a href="https://github.com/habib1712">
-        <img class="github" src="asset/github.png" alt="GitHub">
+        <svg class="github"
+            width="30"
+            height="30"
+            viewBox="0 0 1024 1024"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                transform="scale(64)"
+            />
+        </svg>
     </a>
+
     <a href="https://www.linkedin.com/in/shah-h/">
-    <img class="linkedin" src="asset/linkedin.png" alt="LinkedIn">
+        <svg class="linkedin"
+            width="30"
+            height="30"
+            viewBox="0 0 382 382"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <path
+                d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472L341.91,330.654L341.91,330.654z"
+            />
+        </svg>
     </a>
+
 </div>
-    <ul><nav>
-    <a href="#Home">Home</a>
-    <a href="#AboutMe">About</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Contact">Contact</a>
+
+<ul>
+    <nav>
+        <a href="#Home">Home</a>
+        <a href="#AboutMe">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
     </nav>
-    
-    </ul>
+</ul>
+
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <img
+        src="asset/moon.svg"
+        class="theme-icon moon-icon"
+        alt="Switch to dark mode"
+    >
+
+    <img
+        src="asset/sun.svg"
+        class="theme-icon sun-icon"
+        alt="Switch to light mode"
+    >
+</button>
+
+
 </section>
+
 <section class="parallax" id="Home">
-    <img src="asset/parallax/sky.png" alt="sky" class="parallax-layer" data-speed="0">
-    <img src="asset/parallax/hilly.png" alt="hill" class="parallax-layer" data-speed="0.5">
-    <img src="asset/parallax/mountains.png" alt="mountain" class="parallax-layer" data-speed="0.4">
-    <img src="asset/parallax/cliffs.png" alt="cliff" class="parallax-layer" data-speed="0.28">
-    <h2 id="Intro">Hey, I'm Habib!</h2>
+
+
+<img src="asset/parallax/sky.png" alt="sky" class="parallax-layer" data-speed="0">
+<img src="asset/parallax/hilly.png" alt="hill" class="parallax-layer" data-speed="0.5">
+<img src="asset/parallax/mountains.png" alt="mountain" class="parallax-layer" data-speed="0.4">
+<img src="asset/parallax/cliffs.png" alt="cliff" class="parallax-layer" data-speed="0.28">
+
+<h2 id="Intro">Hey, I'm Habib!</h2>
+
+
 </section>
 
 <main>
-
 
 
 <section class="AboutSkills" id="AboutMe">
 
     <div class="About">
         <h2>About Me</h2>
-        <p>Hey, I'm Habib! Recent Computing and Information Technology Graduate from BCU.
-            I have a strong interest in cloud technologies, automation and programming.
-            I've worked on a variety of projects, including cloud based setups, automated systems, VR environments and coding projects. 
-            
+
+        <p>
+            Hey, I'm Habib! I'm aComputing and Information Technology Graduate from Birmingham City University.
+            I have a strong interest in IT, cloud technologies, automation and programming.
+            I've worked on a variety of projects, including cloud based setups with AWS, automated systems, VR environments and coding projects.
+        </p>
+
+        <br>
+
+        <p>
+            I love working in the different areas of tech, from cloud platforms to front-end and back-end development and I enjoy exploring creative and innovative ways to apply my skills.
+        </p>
+
+        <br>
+
+        <p>
+            Outside of tech I'm probably gaming, listening to music and playing basketball. I love travelling and experiencing new things! I'm also always finding something new to get obsessed with for a while.
         </p>
         <br>
-        <p>I love working in the different areas of tech, from cloud platforms to front-end and back-end development and I enjoy exploring creative and innovative ways to apply my skills.
-            </p>
-            <br>
-            <p>
-            Outside of tech I love music, travelling, basketball, games and horror.
-            </p>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="AboutExtras">
+
+    <!-- <div class="CurrentlyListening">
+    <h2>Currently Listening</h2>
+
+    <img
+        src=""
+        alt="Currently listening"
+    >
+
+    <h3 id="songName">Not connected</h3>
+    <p id="artistName">Connect Spotify to see what I'm listening to</p>
+
+    <button id="spotifyLogin">
+        Connect Spotify
+    </button>
+</div> -->
+
+    <div class="CurrentObsession">
+        <h2>Current Obsession:</h2>
+        <br>
+
+        <img src="asset/outlast_triasl.jpg" alt="Current game">
+
+        <h3>Outlast Trials</h3>
+    </div>
+
+</div>
+
+
+</div>
+</div>
     </div>
 
     <div class="Skills">
         <h2>Skills</h2>
-        <ul><li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>C#</li>
-        <li>SQL</li>
-        <li>Bash</li>
-    
-    </ul>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>SQL</li>
+            <li>Bash</li>
+            <li>AWS</li>
+            <li>Linux</li>
+        </ul>
     </div>
+
 </section>
 
 
-    <section class="Projects" id="Projects">
-        <h2>Projects</h2>
-        
-        <div class="projects-container">
+<section class="Projects" id="Projects">
 
-        <!-- <div class="project-card" onclick="Open('project7')">
-            <h3>WIP</h3>
-            <p>WIP</p>
-        </div>
+    <h2>Projects</h2>
 
-        <div class="project-card" onclick="Open('project6')">
-            <h3>Movie Watchlist</h3>
-            <p>Python - SQL - Flask - HTML/CSS - API</p>
-        </div>
-
-            
-        <div class="project-card" onclick="Open('project5')">
-            <h3>Memory Card Game</h3>
-            <p>HTML - CSS - JavaScript - React</p>
-        </div> -->
+    <div class="projects-container">
 
         <div class="project-card" onclick="Open('project4')">
             <h3>Portfolio Website</h3>
             <p>HTML - CSS - JavaScript</p>
         </div>
+
         <div class="project-card" onclick="Open('project3')">
             <h3>RPG Adventure Game</h3>
-            <p> C# </p>
+            <p>C#</p>
         </div>
+
         <div class="project-card" onclick="Open('project2')">
             <h3>VR Therapeutic Room</h3>
             <p>Unity - C# - XR Toolkit</p>
         </div>
+
         <div class="project-card" onclick="Open('project1')">
             <h3>Automated Inventory System</h3>
             <p>Power Automate - PowerApps - Excel</p>
-
+        </div>
 
     </div>
+
 </section>
 
 
 <div id="Modal" class="modal">
+
     <div class="modal-content">
+
         <span class="close" onclick="Close()">&times;</span>
+
         <h2 id="modalTitle"></h2>
+
         <h4 id="modalTool"></h4>
+
         <p id="modalDescription"></p>
+
+
+        <div id="projectMedia" class="project-media">
+
+            <div id="imageMedia" class="media-option">
+
+                <img
+                    id="projectImage"
+                    src=""
+                    alt="Project image"
+                >
+
+            </div>
+
+
+            <div id="videoMedia" class="media-option">
+
+                <video id="projectVideo" controls playsinline>
+
+                    <source
+                        id="projectVideoSource"
+                        src=""
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+
+            <div id="youtubeMedia" class="media-option">
+
+                <iframe
+                    id="projectYoutube"
+                    src=""
+                    title="Project video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div id="slideshowMedia" class="media-option">
+
+                <div class="slide-title" id="slideTitle">
+                    Workflow Overview
+                </div>
+
+                <div class="slide-image-container">
+
+                    <button
+                        class="slide-arrow previous"
+                        onclick="changeSlide(-1)">
+                        &#10094;
+                    </button>
+
+                    <img
+                        id="slideImage"
+                        src=""
+                        alt="Project screenshot"
+                    >
+
+                    <button
+                        class="slide-arrow next"
+                        onclick="changeSlide(1)">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <div class="slide-counter" id="slideCounter">
+                    1 / 1
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
 </div>
-    
 
 
-    <section class="Contact" id="Contact">
-        <h2>Contact</h2>
-        <p>Lets connect! You can find me on <a href="https://www.linkedin.com/in/shah-h/">linkedin</a> or <br> if you prefer email me at <br><a href="mailto:shahhabib1712@gmail.com">shahhabib1712@gmail.com</a></p>
-    </section>
+<div id="imageLightbox" class="image-lightbox">
+
+    <span
+        class="lightbox-close"
+        onclick="closeLightbox()">
+        &times;
+    </span>
+
+    <div class="lightbox-title" id="lightboxTitle">
+        Workflow Overview
+    </div>
+
+    <button
+        class="lightbox-arrow lightbox-previous"
+        onclick="changeLightboxSlide(-1)">
+        &#10094;
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Expanded project screenshot"
+    >
+
+    <button
+        class="lightbox-arrow lightbox-next"
+        onclick="changeLightboxSlide(1)">
+        &#10095;
+    </button>
+
+    <div class="lightbox-counter" id="lightboxCounter">
+        1 / 8
+    </div>
+
+</div>
+
+
+<section class="Contact" id="Contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        Lets connect! You can find me on
+        <a href="https://www.linkedin.com/in/shah-h/">linkedin</a>
+        or
+        <br>
+        if you prefer email me at
+        <br>
+        <a href="mailto:shahhabib1712@gmail.com">shahhabib1712@gmail.com</a>
+    </p>
+
+</section>
+```
+
 </main>
+
 </body>
 </html>
