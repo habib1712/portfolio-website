@@ -386,9 +386,41 @@ const projectInfo = {
 
         media: {
 
-            type: "video",
+            type: "slideshow",
 
-            source: ""
+            slides:[
+
+                {
+                    image: "asset/project assets/vrTherapy/UnMenu.png",
+                    title: "UI"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/Unroom.png",
+                    title: "Main room"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/Unbeach.png",
+                    title: "Beach"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/UnForest.png",
+                    title: "Forest"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/UnCities.jpg",
+                    title: "height phobia"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/Uncaves.jpg",
+                    title: "darkness phobia"
+                },
+                {
+                    image: "asset/project assets/vrTherapy/Unspi.jpg",
+                    title: "Spider phobia"
+                }
+            
+
+            ]
 
         }
 
