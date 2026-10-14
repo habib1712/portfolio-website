@@ -497,7 +497,7 @@ const projectInfo = {
 
         description:
             "A web-based IT helpdesk application built with Python, Flask and SQLite to simulate a basic IT support workflow. It allows users to create support tickets with issue descriptions, requester details and priority levels. The dashboard displays ticket statistics and provides an overview of support requests, while ticket statuses can be updated as issues progress towards resolution. The system stores ticket data in an SQLite database, allowing requests and status changes to persist between sessions.",
-
+        github: "https://github.com/habib1712/Helpdesk-Ticketing-system",
         media: {
 
             type: "slideshow",
@@ -563,6 +563,18 @@ function Open(projectId) {
     tool.textContent = project.tool || "";
 
     description.innerHTML = project.description || "";
+
+    
+const githubLink = document.getElementById("githubLink");
+
+if (project.github) {
+    githubLink.href = project.github;
+    githubLink.textContent = "GitHub Repo";
+    githubLink.style.display = "inline-block";
+} else {
+    githubLink.style.display = "none";
+}
+
 
 
     hideAllMedia();
