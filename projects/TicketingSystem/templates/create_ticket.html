@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Create Ticket | IT Helpdesk</title>
+</head>
+<body>
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div>
+                    <h2>Helpdesk</h2>
+                    <p>IT Support Portal</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <a href="{{ url_for('dashboard') }}" class="nav-link">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="{{ url_for('create_ticket') }}" class="nav-link active">
+                    <span>＋</span> Create Ticket
+                </a>
+            </nav>
+
+            
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    
+                    <h1>Create Ticket</h1>
+                    <p class="subtitle">Report a new IT support issue.</p>
+                </div>
+            </header>
+
+            <section class="tickets-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Ticket Details</h2>
+                        <p>Enter the details of the issue below.</p>
+                    </div>
+                </div>
+
+                <form method="POST" action="{{ url_for('create_ticket') }}">
+                    <div>
+                        <label for="title">Issue Title</label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="description">Description</label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <label for="requester">Requester</label>
+                        <input
+                            type="text"
+                            id="requester"
+                            name="requester"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button button-primary">
+                        Submit Ticket
+                    </button>
+                </form>
+            </section>
+    </div>
+</body>
+</html>

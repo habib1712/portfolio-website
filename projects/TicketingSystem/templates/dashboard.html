@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>IT Helpdesk | Dashboard</title>
+</head>
+<body>
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div>
+                    <h2>Helpdesk</h2>
+                    <p>IT Support Portal</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <a href="{{ url_for('dashboard') }}" class="nav-link active">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="{{ url_for('create_ticket') }}" class="nav-link">
+                    <span>＋</span> Create Ticket
+                </a>
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    
+                    <h1>Dashboard</h1>
+                    <p class="subtitle">Monitor and manage IT support requests.</p>
+                </div>
+
+                
+            </header>
+
+            <section class="summary-grid">
+                <article class="summary-card">
+                    <div class="summary-top">
+                        <span>Total Tickets</span>
+                        <span class="summary-icon purple"></span>
+                    </div>
+                    <h2>{{ total_tickets }}</h2>
+                    <p>All support requests</p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-top">
+                        <span>Open Tickets</span>
+                        <span class="summary-icon amber"></span>
+                    </div>
+                    <h2>{{ open_tickets }}</h2>
+                    <p>Awaiting resolution</p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-top">
+                        <span>In Progress</span>
+                        <span class="summary-icon blue"></span>
+                    </div>
+                    <h2>{{ in_progress_tickets }}</h2>
+                    <p>Currently being worked on</p>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-top">
+                        <span>Resolved</span>
+                        <span class="summary-icon green"></span>
+                    </div>
+                    <h2>{{ resolved_tickets }}</h2>
+                    <p>Successfully completed</p>
+                </article>
+            </section>
+
+            <section class="tickets-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Support Tickets</h2>
+                        <p>Review and manage recent requests.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Issue</th>
+                                <th>Description</th>
+                                <th>Requester</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Date Created</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for ticket in tickets %}
+                            <tr>
+                                <td class="ticket-id">
+                                    #{{ ticket.id }}
+                                </td>
+                                <td class="issue-title">
+                                    {{ ticket.title }}
+                                </td>
+                                <td class="ticket-description">
+                                    {{ ticket.description }}
+                                </td>
+                                <td>{{ ticket.requester }}</td>
+                                <td>
+                                    <span class="priority priority-{{ ticket.priority|lower }}">
+                                        {{ ticket.priority }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="status status-{{ ticket.status|lower|replace(' ', '-') }}">
+                                        {{ ticket.status }}
+                                    </span>
+                                </td>
+                                
+                                
+                                <td>{{ ticket.created_at }}</td>
+                                <td>
+                                    <form action="{{ url_for('update_status', ticket_id=ticket.id) }}" 
+                                    method="POST">
+                                <select name="status" onchange="this.form.submit()">
+                                    <option value="Open" {% if ticket.status == 'Open' %}selected{% endif %}>Open</option>
+                                    <option value="In Progress" {% if ticket.status == 'In Progress' %}selected{% endif %}>In Progress</option>
+                                    <option value="Resolved" {% if ticket.status == 'Resolved' %}selected{% endif %}>Resolved</option>
+                                </select>
+                            </form>
+                            </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="7" class="empty-state">
+                                    <div class="empty-icon">▤</div>
+                                    <h3>No tickets yet</h3>
+                                    <p>New support requests will appear here.</p>
+                                    
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
