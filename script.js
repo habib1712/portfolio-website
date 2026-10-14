@@ -491,18 +491,27 @@ const projectInfo = {
 
     project5: {
 
-        title: "Example Project",
+        title: "Helpdesk Ticketing System ",
 
-        tool: "Python - Flask - SQL",
+        tool: "Python - Flask - SQLITE - HTML - CSS",
 
         description:
-            "Example project description.",
+            "A web-based IT helpdesk application built with Python, Flask and SQLite to simulate a basic IT support workflow. It allows users to create support tickets with issue descriptions, requester details and priority levels. The dashboard displays ticket statistics and provides an overview of support requests, while ticket statuses can be updated as issues progress towards resolution. The system stores ticket data in an SQLite database, allowing requests and status changes to persist between sessions.",
 
         media: {
 
-            type: "image",
+            type: "slideshow",
 
-            source: "asset/project assets/example.png"
+
+            slides: [
+
+                {
+                    image: "asset/project assets/Ticketing/TicketDash.png",
+                },
+                {
+                    image: "asset/project assets/Ticketing/TicketCreate.png",
+                }
+            ]
 
         }
 
